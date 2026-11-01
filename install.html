@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Install guide | Falcon Pro</title><meta name="description" content="Step by step: download Falcon Pro, check it, install it, finish first-run setup and translate your first document."><meta name="theme-color" content="#10263d">
+<link rel="icon" href="assets/img/favicon.png"><link rel="stylesheet" href="assets/css/site.css"></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap"><a class="brand" href="index.html"><img src="assets/img/falcon-logo.png" alt="" width="38" height="25">Falcon <small>Pro</small></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-label="Menu"><img class="icon" src="assets/icons/lucide/menu.svg" alt="" width="20" height="20" aria-hidden="true"><span>Menu</span></button>
+<nav class="main" aria-label="Main"><a href="index.html">Home</a><a href="tour.html">Features &amp; tour</a><a href="install.html" aria-current="page">Install guide</a><a href="privacy.html">Privacy & security</a><a href="support.html">Support</a><a href="changelog.html">Changelog</a><a class="cta" href="download.html">Download</a></nav></div></header><main id="main">
+<div class="page-head"><div class="wrap"><h1>Install guide</h1><p>From download to your first translation, step by step. It takes about 15 minutes, most of it the one-time model download.</p></div></div>
+<section><div class="wrap narrow">
+<div class="tabs" role="tablist" aria-label="Operating system"><button class="tab" role="tab" data-os="windows" aria-controls="win" aria-selected="true">Windows 11</button><button class="tab" role="tab" data-os="linux" aria-controls="lin" aria-selected="false">Linux</button></div>
+
+<div id="win" class="panel" role="tabpanel">
+<ol class="steps">
+<li><h3>Check your computer</h3><p>Windows 11, 64-bit; 16 GB of memory recommended (12 GB works but is slower); a processor with AVX2; about 3 GB free for the models. No Python, Office or developer tools are needed.</p></li>
+<li><h3>Download the installer</h3><p>Open the <a href="download.html">Download page</a> and choose <b>Download</b> for Windows. Save <code>Falcon_&hellip;_x64-setup.exe</code> to your Downloads folder.</p></li>
+<li id="verify"><h3>Check the file (recommended)</h3><p>This confirms the file is exactly the one that was published. Open <b>PowerShell</b>, run the command, and compare the result with the SHA-256 shown next to the download.</p><pre><code>Get-FileHash "$env:USERPROFILE\Downloads\Falcon_1.0.0-beta.3_x64-setup.exe" -Algorithm SHA256</code></pre><div class="callout info">If the two values differ, do not run the file. Download it again from this site.</div></li>
+<li><h3>Run the installer</h3><p>Double-click the file. Because the beta is not signed yet, Windows SmartScreen may say <b>&ldquo;Windows protected your PC&rdquo;</b>. Click <b>More info</b>, then <b>Run anyway</b>. Approve the administrator prompt. Setup also installs the Visual C++ and WebView2 components Falcon needs.</p></li>
+<li><h3>Start Falcon</h3><p>Open <b>Falcon Pro</b> from the Start menu. A short loading screen appears, then the welcome page. Click <b>Set up Falcon</b>.</p></li>
+<li><h3>Choose a workspace folder</h3><p>Pick where Falcon keeps your documents, for example <code>Documents\Falcon</code>. Use a folder on a drive with free space; you can change it later.</p></li>
+<li><h3>Choose protection</h3><p><b>Standard</b> needs no password. <b>Secure Vault</b> encrypts Falcon&rsquo;s database with a password you choose (at least 8 characters) and gives you a recovery key. <b>Write the recovery key down and keep it safe:</b> it is shown only once.</p></li>
+<li><h3>Install the language models</h3><p>On <b>Checking this device</b>, Falcon lists the models: English<img class="icon inline-icon" src="assets/icons/lucide/arrow-left-right.svg" alt="to and from" width="20" height="20">Arabic, English<img class="icon inline-icon" src="assets/icons/lucide/arrow-left-right.svg" alt="to and from" width="20" height="20">Urdu and scanned-page OCR (about 1.3 GB together). Press <b>Install</b> and wait. Progress shows downloading, verifying and testing. If the connection drops, press <b>Install</b> again and it resumes. When everything is verified the button changes to <b>Continue</b>.</p><div class="callout">If a problem is found, Falcon shows a code such as <code>FLC-3003</code> and what to try. Look it up on the <a href="support.html">Support page</a>.</div></li>
+<li><h3>Finish setup</h3><p>Pick your default direction and finish. Falcon opens your empty workspace.</p></li>
+<li><h3>Translate your first document</h3><p>Click <b>Copy files</b> and choose a PDF or Word file. Select it, click <b>Translate</b>, choose the language and <b>Start translation</b>. When it finishes, open it to review. Fix anything highlighted, then <b>Export</b>.</p></li>
+</ol></div>
+
+<div id="lin" class="panel" role="tabpanel" hidden>
+<ol class="steps">
+<li><h3>Check your computer</h3><p>Debian or Ubuntu 22.04 or newer, 64-bit; 16 GB of memory recommended; AVX2 processor; about 3 GB free for the models.</p></li>
+<li><h3>Download the package</h3><p>From the <a href="download.html">Download page</a> save <code>Falcon_&hellip;_amd64.deb</code>.</p></li>
+<li><h3>Check the file</h3><pre><code>sha256sum ~/Downloads/Falcon_1.0.0-beta.3_amd64.deb</code></pre><p>Compare it with the SHA-256 on the download page.</p></li>
+<li><h3>Install</h3><pre><code>sudo apt install ~/Downloads/Falcon_1.0.0-beta.3_amd64.deb</code></pre><p>Without administrator rights you can unpack it for your own user instead:</p><pre><code>mkdir -p ~/.local/opt/falcon-pro
+dpkg-deb -x ~/Downloads/Falcon_1.0.0-beta.3_amd64.deb ~/.local/opt/falcon-pro
+~/.local/opt/falcon-pro/usr/bin/falcon</code></pre></li>
+<li><h3>Start Falcon and finish setup</h3><p>Open <b>Falcon Pro</b> from your applications menu, then follow steps 5 to 10 of the Windows guide: workspace, protection, <b>Install</b> the models, then translate.</p></li>
+</ol></div>
+
+<h2 style="margin-top:20px">Good to know</h2>
+<details><summary>Where does Falcon keep my data?</summary><p>Settings, the database and the downloaded models live in your user profile (<code>%LOCALAPPDATA%\Falcon</code> on Windows, <code>~/.local/share/Falcon</code> on Linux). Your documents live in the workspace folder you chose.</p></details>
+<details><summary>Can I install the models without internet?</summary><p>Yes. On a connected machine download the model pack folder, copy it over, and in <b>Settings <img class="icon inline-icon" src="assets/icons/lucide/arrow-right.svg" alt="" width="20" height="20" aria-hidden="true"> Models</b> choose <b>Install from folder</b>.</p></details>
+<details><summary>The download stopped or failed</summary><p>Press <b>Install</b> again; it resumes from where it stopped. If a file fails its check, Falcon says so and asks you to retry. A repeated failure shows a support code, see <a href="support.html">Support</a>.</p></details>
+<details><summary>How do I update?</summary><p>Download the newer installer from the <a href="download.html">Download page</a> and run it over the old one. Your settings, workspace and models are kept.</p></details>
+<details><summary>How do I uninstall?</summary><p>Windows: Settings <img class="icon inline-icon" src="assets/icons/lucide/arrow-right.svg" alt="" width="20" height="20" aria-hidden="true"> Apps <img class="icon inline-icon" src="assets/icons/lucide/arrow-right.svg" alt="" width="20" height="20" aria-hidden="true"> Falcon Pro <img class="icon inline-icon" src="assets/icons/lucide/arrow-right.svg" alt="" width="20" height="20" aria-hidden="true"> Uninstall. Linux: <code>sudo apt remove falcon</code>. Your documents are never deleted. To remove models and settings too, delete the Falcon data folder above.</p></details>
+</div></section><section class="alt"><div class="wrap split"><div><div class="kicker">First run</div><h2>What the first-time setup looks like</h2><p class="sub">Falcon downloads the language packs once and checks them before you start. This clip is a real download, sped up eight times. After it finishes you can work without an internet connection.</p></div><figure class="clip" style="margin:0"><div class="frame"><div class="bar"><i></i><i></i><i></i><span>Setup &mdash; Falcon Pro</span></div><video autoplay loop muted playsinline preload="metadata" poster="assets/staticsite/samples/clips/setup-poster.jpg" aria-label="Falcon downloading and verifying its language packs during first-time setup."><source src="assets/staticsite/samples/clips/setup.mp4" type="video/mp4"><img src="assets/staticsite/samples/clips/setup.gif" alt="Falcon downloading and verifying its language packs during first-time setup."></video></div></figure></div></section>
+</main><footer class="site-footer"><div class="wrap"><div class="foot-grid">
+<div><a class="brand" href="index.html" style="color:#fff"><img src="assets/img/falcon-logo.png" alt="" width="38" height="25">Falcon Pro</a><p style="margin-top:12px;max-width:34ch">Translate, stamp and watermark documents in English, Arabic and Urdu. Entirely on your own computer.</p></div>
+<div><h4>Product</h4><ul><li><a href="tour.html">Features &amp; tour</a></li><li><a href="download.html">Download</a></li><li><a href="changelog.html">Changelog</a></li></ul></div>
+<div><h4>Help</h4><ul><li><a href="install.html">Install guide</a></li><li><a href="support.html">Support &amp; error codes</a></li><li><a href="privacy.html">Privacy &amp; security</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="https://l24tech.in" rel="noopener">L24 Technologies</a></li><li><a data-releases-url href="https://github.com/anushkrishnav/falcon-downloads/releases" rel="noopener">All releases</a></li></ul></div></div>
+<div class="legal"><span>Built by L24 Technologies &middot; Copyright &copy; 2024 L24 Technologies &middot; <a href="assets/icons/lucide/LICENSE">Lucide icons</a></span><span>Beta software, provided as is. Machine translation must be reviewed before it is relied on.</span></div></div></footer>
+<script src="assets/js/site.js" defer></script></body></html>

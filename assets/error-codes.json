@@ -1,0 +1,422 @@
+[
+ {
+  "code": "FLC-1001",
+  "name": "WORKSPACE_PERMISSION_DENIED",
+  "title": "Falcon is not allowed to use that folder",
+  "fix": "Choose a folder you own (for example inside Documents), or change the folder permissions, then try again."
+ },
+ {
+  "code": "FLC-1002",
+  "name": "WORKSPACE_NOT_FOUND",
+  "title": "The workspace could not be found",
+  "fix": "The folder may have been moved, renamed or deleted. Reopen Falcon, or choose the workspace folder again in Settings > Storage."
+ },
+ {
+  "code": "FLC-1003",
+  "name": "WORKSPACE_REVISION_CONFLICT",
+  "title": "The workspace changed while you were working",
+  "fix": "Reload the file list and repeat the action."
+ },
+ {
+  "code": "FLC-1004",
+  "name": "VAULT_LOCKED",
+  "title": "The secure vault is locked",
+  "fix": "Unlock Falcon with your vault password, then repeat the action."
+ },
+ {
+  "code": "FLC-1005",
+  "name": "VAULT_PASSWORD_INVALID",
+  "title": "The vault password is wrong",
+  "fix": "Check the password and try again. If it is lost, use the recovery key shown when the vault was created."
+ },
+ {
+  "code": "FLC-1006",
+  "name": "VAULT_RECOVERY_FAILED",
+  "title": "The recovery key was not accepted",
+  "fix": "Check the recovery key for typing mistakes (copy it exactly as it was shown). If it still fails, the vault cannot be opened and support must be contacted."
+ },
+ {
+  "code": "FLC-1007",
+  "name": "WORKSPACE_SCHEMA_TOO_NEW",
+  "title": "This workspace was made by a newer Falcon",
+  "fix": "Update Falcon to the latest version, then open the workspace again."
+ },
+ {
+  "code": "FLC-1008",
+  "name": "STORAGE_UNAVAILABLE",
+  "title": "Falcon could not open its data folder or database",
+  "fix": "Make sure the disk is not full or read-only and that security software is not blocking Falcon, then restart the app."
+ },
+ {
+  "code": "FLC-1009",
+  "name": "INSUFFICIENT_DISK_SPACE",
+  "title": "There is not enough free disk space",
+  "fix": "Free some space on the drive that holds Falcon's data and the output folder, then try again."
+ },
+ {
+  "code": "FLC-2001",
+  "name": "SOURCE_CHANGED_DURING_SNAPSHOT",
+  "title": "The file changed while Falcon was reading it",
+  "fix": "Close the file in other programs (Word, Excel, a PDF reader) and sync tools, then run the job again."
+ },
+ {
+  "code": "FLC-2002",
+  "name": "SOURCE_PASSWORD_REQUIRED",
+  "title": "The file is password protected",
+  "fix": "Remove the password in the program that created the file, or open it there and save an unprotected copy."
+ },
+ {
+  "code": "FLC-2003",
+  "name": "UNSUPPORTED_FORMAT",
+  "title": "This file type is not supported",
+  "fix": "Falcon translates PDF, DOCX and XLSX files. Convert the file to one of these formats first."
+ },
+ {
+  "code": "FLC-2004",
+  "name": "DOCUMENT_CORRUPT",
+  "title": "The file is damaged or unreadable",
+  "fix": "Open the file in its own program and save a fresh copy. If it will not open there either, the file is damaged."
+ },
+ {
+  "code": "FLC-2005",
+  "name": "DOCUMENT_LIMIT_EXCEEDED",
+  "title": "The file is larger than Falcon can process",
+  "fix": "Split the document into smaller parts (fewer pages or sheets) and translate them separately."
+ },
+ {
+  "code": "FLC-2006",
+  "name": "ARCHIVE_LIMIT_EXCEEDED",
+  "title": "The file contains too much packed data",
+  "fix": "The Office file expands to an unsafe size. Re-save it without large embedded objects, or split it."
+ },
+ {
+  "code": "FLC-2007",
+  "name": "ARCHIVE_PATH_UNSAFE",
+  "title": "The file contains an unsafe internal path",
+  "fix": "Falcon refused the file for safety. Re-save it from the original program; do not trust files from unknown sources."
+ },
+ {
+  "code": "FLC-2008",
+  "name": "DOCUMENT_NOT_FOUND",
+  "title": "The document is not ready or does not exist",
+  "fix": "Wait for the job to finish parsing the file, then try again. If the job failed, run it again."
+ },
+ {
+  "code": "FLC-2009",
+  "name": "DOCUMENT_REVISION_CONFLICT",
+  "title": "The document changed since you opened it",
+  "fix": "Reload the document in Compare and repeat your edit."
+ },
+ {
+  "code": "FLC-2010",
+  "name": "JOB_STATE_CONFLICT",
+  "title": "The job cannot do that right now",
+  "fix": "Wait for the job to reach a stable state (running, paused or finished), then try again."
+ },
+ {
+  "code": "FLC-2011",
+  "name": "JOB_NOT_FOUND",
+  "title": "The job could not be found",
+  "fix": "It may have been deleted. Refresh the job list."
+ },
+ {
+  "code": "FLC-2012",
+  "name": "IDEMPOTENCY_CONFLICT",
+  "title": "The same request was sent twice with different settings",
+  "fix": "Repeat the action from the beginning."
+ },
+ {
+  "code": "FLC-2013",
+  "name": "BATCH_ALL_OR_NOTHING_BLOCKED",
+  "title": "A batch was stopped because some files cannot be translated",
+  "fix": "Remove the files that failed the check, or turn off the all-or-nothing option, then start the batch again."
+ },
+ {
+  "code": "FLC-2014",
+  "name": "LANGUAGE_AMBIGUOUS",
+  "title": "Falcon could not tell the source language",
+  "fix": "Pick the source language yourself in the Translate dialog."
+ },
+ {
+  "code": "FLC-2015",
+  "name": "MEMORY_ENTRY_NOT_FOUND",
+  "title": "The translation memory entry was not found",
+  "fix": "It may have been deleted. Refresh the Memory page."
+ },
+ {
+  "code": "FLC-2016",
+  "name": "TERM_SET_NOT_FOUND",
+  "title": "The terminology set was not found",
+  "fix": "It may have been deleted. Refresh the Terminology page."
+ },
+ {
+  "code": "FLC-2017",
+  "name": "TERMINOLOGY_CONFLICT",
+  "title": "Two glossary terms contradict each other",
+  "fix": "Open Terminology and remove or change one of the conflicting entries."
+ },
+ {
+  "code": "FLC-2018",
+  "name": "TRANSLATED_UNIT_NOT_FOUND",
+  "title": "That segment no longer exists",
+  "fix": "Reload the document in Compare."
+ },
+ {
+  "code": "FLC-2019",
+  "name": "REVIEW_NOTHING_TO_REJECT",
+  "title": "There is no unapproved edit to discard",
+  "fix": "Nothing to do; the segment already matches its approved text."
+ },
+ {
+  "code": "FLC-2020",
+  "name": "REVISION_NOT_FOUND",
+  "title": "That earlier version was not found",
+  "fix": "Reload the revision history and pick another version."
+ },
+ {
+  "code": "FLC-2021",
+  "name": "JOB_INTERRUPTED",
+  "title": "Falcon was closed while this job was running",
+  "fix": "Press Retry on the job. Nothing was lost; it starts again from the beginning."
+ },
+ {
+  "code": "FLC-3001",
+  "name": "MODEL_NOT_INSTALLED",
+  "title": "A translation model is missing",
+  "fix": "Open Settings > Models and install the language pack, or check the internet connection and retry the download."
+ },
+ {
+  "code": "FLC-3002",
+  "name": "MODEL_INCOMPATIBLE",
+  "title": "The installed model does not match this Falcon",
+  "fix": "Reinstall the model pack from Settings > Models, or update Falcon."
+ },
+ {
+  "code": "FLC-3003",
+  "name": "MODEL_CHECKSUM_FAILED",
+  "title": "A downloaded model file is damaged",
+  "fix": "Delete the pack in Settings > Models and download it again. Repeated failures usually mean an unstable connection or a proxy altering the download."
+ },
+ {
+  "code": "FLC-3004",
+  "name": "MODEL_OUT_OF_MEMORY",
+  "title": "The computer ran out of memory while translating",
+  "fix": "Close other programs, translate fewer pages at a time, and retry. 16 GB of RAM is recommended for large documents."
+ },
+ {
+  "code": "FLC-3005",
+  "name": "MODEL_MEMORY_BUDGET_EXCEEDED",
+  "title": "Not enough free memory to start translating",
+  "fix": "Close other programs and retry. Other jobs may be using the memory; wait for them to finish."
+ },
+ {
+  "code": "FLC-3006",
+  "name": "GPU_DRIVER_UNSUPPORTED",
+  "title": "The graphics driver is not supported",
+  "fix": "Update the graphics driver, or turn off GPU use; Falcon works on the CPU alone."
+ },
+ {
+  "code": "FLC-3007",
+  "name": "TRANSLATION_FAILED",
+  "title": "Translation failed",
+  "fix": "Retry the job. If it fails again, send a diagnostics bundle from Settings > Diagnostics."
+ },
+ {
+  "code": "FLC-3008",
+  "name": "TRANSLATION_STRUCTURE_INVALID",
+  "title": "The translation broke the document structure",
+  "fix": "Retry the segment from Compare, or edit it by hand."
+ },
+ {
+  "code": "FLC-3009",
+  "name": "TRANSLATION_ALIGNMENT_FAILED",
+  "title": "The translated text could not be matched to the original",
+  "fix": "Retry the segment from Compare, or edit it by hand."
+ },
+ {
+  "code": "FLC-3010",
+  "name": "PLACEHOLDER_RESTORE_FAILED",
+  "title": "Numbers, names or formatting could not be restored",
+  "fix": "Review the highlighted segments in Compare and correct them by hand."
+ },
+ {
+  "code": "FLC-3011",
+  "name": "VALIDATION_BLOCKED_OUTPUT",
+  "title": "The result failed Falcon's quality checks",
+  "fix": "Open Compare, fix the flagged segments, then export again."
+ },
+ {
+  "code": "FLC-3012",
+  "name": "DEVICE_BELOW_RECOMMENDED_MEMORY",
+  "title": "This computer has less memory than recommended",
+  "fix": "Falcon still works but is slower and may split large files. 16 GB of RAM is recommended."
+ },
+ {
+  "code": "FLC-3013",
+  "name": "LLAMA_CLI_DOWNLOAD_FAILED",
+  "title": "The helper program could not be downloaded",
+  "fix": "Check the internet connection and retry from Settings > Models."
+ },
+ {
+  "code": "FLC-4001",
+  "name": "OCR_FAILED",
+  "title": "Scanned text could not be read",
+  "fix": "Check that the OCR models are installed (Settings > Models) and that the scan is sharp and upright, then retry."
+ },
+ {
+  "code": "FLC-5001",
+  "name": "LAYOUT_OVERFLOW_REQUIRES_REVIEW",
+  "title": "Translated text does not fit the original layout",
+  "fix": "Open Compare and shorten the flagged segments, or choose a layout that allows text to grow."
+ },
+ {
+  "code": "FLC-5002",
+  "name": "RECONSTRUCTION_FAILED",
+  "title": "The translated file could not be built",
+  "fix": "Retry the export. If it fails again, send a diagnostics bundle from Settings > Diagnostics."
+ },
+ {
+  "code": "FLC-5003",
+  "name": "OUTPUT_COLLISION_REQUIRES_INPUT",
+  "title": "A file with that name already exists",
+  "fix": "Choose a different name or folder, or confirm replacing the existing file."
+ },
+ {
+  "code": "FLC-5004",
+  "name": "OUTPUT_PROTECTION_UNAVAILABLE",
+  "title": "The output could not be protected as requested",
+  "fix": "Turn off output protection or fix the vault state, then export again."
+ },
+ {
+  "code": "FLC-5005",
+  "name": "OUTPUT_VERIFY_FAILED",
+  "title": "The exported file failed its safety check",
+  "fix": "Export again. The file was not saved; if it keeps failing, send a diagnostics bundle."
+ },
+ {
+  "code": "FLC-5006",
+  "name": "SIGNATURE_PLACEMENT_INVALID",
+  "title": "The stamp position is not on the page",
+  "fix": "Move the stamp box inside the page and place it again."
+ },
+ {
+  "code": "FLC-5007",
+  "name": "SIGNATURE_IMAGE_INVALID",
+  "title": "The signature stamp image could not be read",
+  "fix": "Use a PNG or JPEG image that opens in an image viewer."
+ },
+ {
+  "code": "FLC-5008",
+  "name": "SIGNATURE_NAME_INVALID",
+  "title": "The signer name is empty or too long",
+  "fix": "Enter a shorter name."
+ },
+ {
+  "code": "FLC-5009",
+  "name": "COMPANY_ASSET_NOT_FOUND",
+  "title": "The company seal or logo has not been uploaded",
+  "fix": "Upload the company seal or logo in the Stamp dialog first, then stamp again."
+ },
+ {
+  "code": "FLC-5010",
+  "name": "WATERMARK_INVALID",
+  "title": "The watermark settings are not valid",
+  "fix": "Use short text, opacity between 0 and 100 percent and a rotation within range."
+ },
+ {
+  "code": "FLC-5011",
+  "name": "WATERMARK_NOT_FOUND",
+  "title": "There is no Falcon watermark to remove",
+  "fix": "Nothing to do; the document carries no Falcon watermark."
+ },
+ {
+  "code": "FLC-5012",
+  "name": "PLACED_ASSET_NOT_FOUND",
+  "title": "That stamp is not a Falcon-placed item",
+  "fix": "Only signature stamps, seals and logos placed by Falcon can be removed."
+ },
+ {
+  "code": "FLC-5013",
+  "name": "OPTIMIZE_PROFILE_INVALID",
+  "title": "The optimize setting is unknown",
+  "fix": "Pick one of the listed optimize profiles."
+ },
+ {
+  "code": "FLC-5014",
+  "name": "PAGE_SETUP_INVALID",
+  "title": "The page size settings are not valid",
+  "fix": "Enter a valid page size and page range."
+ },
+ {
+  "code": "FLC-5015",
+  "name": "PAGE_SETUP_NOT_FOUND",
+  "title": "Those pages were never resized by Falcon",
+  "fix": "Nothing to reset."
+ },
+ {
+  "code": "FLC-5016",
+  "name": "PROTECT_PASSWORD_INVALID",
+  "title": "The PDF password is not acceptable",
+  "fix": "Use a password of 8 to 128 characters that is not blank."
+ },
+ {
+  "code": "FLC-5017",
+  "name": "CONVERT_UNSUPPORTED",
+  "title": "That conversion is not supported",
+  "fix": "Falcon converts between PDF and DOCX only. Check the source file is not empty."
+ },
+ {
+  "code": "FLC-5018",
+  "name": "DOCUMENT_ALREADY_PROTECTED",
+  "title": "The PDF is already password protected",
+  "fix": "Remove the existing password first."
+ },
+ {
+  "code": "FLC-6001",
+  "name": "FEATURE_NOT_LICENSED",
+  "title": "This feature needs a license",
+  "fix": "Activate a license in Settings > License."
+ },
+ {
+  "code": "FLC-6002",
+  "name": "LICENSE_INVALID",
+  "title": "The license file is not valid",
+  "fix": "Use the original license file you received. If it was edited or truncated, request a new copy."
+ },
+ {
+  "code": "FLC-7001",
+  "name": "SIDECAR_UNAVAILABLE",
+  "title": "A Falcon helper program is not running",
+  "fix": "Restart Falcon. If it persists, reinstall Falcon; security software may be blocking the helper."
+ },
+ {
+  "code": "FLC-7002",
+  "name": "SIDECAR_CRASH_LOOP",
+  "title": "A Falcon helper program keeps crashing",
+  "fix": "Restart the computer, free memory, and retry. Send a diagnostics bundle if it continues."
+ },
+ {
+  "code": "FLC-7003",
+  "name": "SIDECAR_PROTOCOL_MISMATCH",
+  "title": "A Falcon helper program is the wrong version",
+  "fix": "Reinstall Falcon so that all parts are the same version."
+ },
+ {
+  "code": "FLC-7004",
+  "name": "SECURITY_POLICY_VIOLATION",
+  "title": "Falcon blocked an unsafe action",
+  "fix": "No action is needed. If you did not expect this, send a diagnostics bundle."
+ },
+ {
+  "code": "FLC-9000",
+  "name": "INTERNAL_ERROR",
+  "title": "Falcon hit an unexpected problem",
+  "fix": "Restart Falcon and repeat the action. If it happens again, open Settings > Diagnostics, create a diagnostics bundle and send it to support."
+ },
+ {
+  "code": "FLC-9001",
+  "name": "NOT_IMPLEMENTED",
+  "title": "This action is not available yet",
+  "fix": "Update Falcon. If the problem remains, tell support which action you used."
+ }
+]

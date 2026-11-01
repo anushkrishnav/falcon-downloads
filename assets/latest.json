@@ -1,0 +1,35 @@
+{
+  "latest": "1.0.0-beta.2",
+  "available": true,
+  "version": {
+    "version": "1.0.0-beta.2",
+    "date": "2026-11-01",
+    "channel": "beta",
+    "status": "available",
+    "summary": "Early beta for testing: English with Arabic and Urdu, in one guided setup. Windows installer.",
+    "notes": [
+      "English to and from Arabic, and English to and from Urdu, translated on your own computer",
+      "One-step first-run setup: all language models and OCR install together, then verify themselves",
+      "Stamp feature (signature stamp, company seal, logo) and text or image watermarks with opacity, rotation and repeat-across-the-page",
+      "Export a PDF as the Layout version, a Text-only version, or both",
+      "Review panel: click an issue to jump to it, then fix, retry, ignore or mark reviewed",
+      "Support codes (FLC-xxxx) with a Diagnostics page and a redacted support bundle",
+      "Unsigned installer: Windows SmartScreen will ask you to confirm (More info, then Run anyway)",
+      "Known issue: English to Urdu on Word (.docx) and Excel files returns Arabic text in this build; PDF and text files are fine. Fixed in 1.0.0-beta.3"
+    ],
+    "assets": {
+      "windows": {
+        "name": "Falcon_1.0.0-beta.2_x64-setup.exe",
+        "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/v1.0.0-beta.2/Falcon_1.0.0-beta.2_x64-setup.exe",
+        "size": 289021554,
+        "sha256": "9730d225dd1c0747fd0a23c45097b6427dcf3dff7a9090a4a4d9604b1453dda8"
+      },
+      "checksums": {
+        "name": "SHA256SUMS.txt",
+        "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/v1.0.0-beta.2/SHA256SUMS.txt",
+        "size": 101,
+        "sha256": ""
+      }
+    }
+  }
+}
