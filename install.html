@@ -36,6 +36,7 @@ dpkg-deb -x ~/Downloads/Falcon_1.0.0-beta.3_amd64.deb ~/.local/opt/falcon-pro
 </ol></div>
 
 <h2 style="margin-top:20px">Good to know</h2>
+<details id="unsecure"><summary>How do I remove the workspace password?</summary><p>Open <b>Settings &rarr; Security &rarr; View all workspaces</b>. Select a secure workspace and choose <b>Unsecure&hellip;</b>. Enter your current password, then confirm <b>Unsecure workspace</b>. Falcon will no longer ask for a password on this device. Your documents and saved work are kept. Protection is shared across workspace folders, so this applies to all of them.</p></details>
 <details><summary>Where does Falcon keep my data?</summary><p>Settings, the database and the downloaded models live in your user profile (<code>%LOCALAPPDATA%\Falcon</code> on Windows, <code>~/.local/share/Falcon</code> on Linux). Your documents live in the workspace folder you chose.</p></details>
 <details><summary>Can I install the models without internet?</summary><p>Yes. On a connected machine download the model pack folder, copy it over, and in <b>Settings <img class="icon inline-icon" src="assets/icons/lucide/arrow-right.svg" alt="" width="20" height="20" aria-hidden="true"> Models</b> choose <b>Install from folder</b>.</p></details>
 <details><summary>The download stopped or failed</summary><p>Press <b>Install</b> again; it resumes from where it stopped. If a file fails its check, Falcon says so and asks you to retry. A repeated failure shows a support code, see <a href="support.html">Support</a>.</p></details>
