@@ -1,8 +1,36 @@
 {
   "repo": "anushkrishnav/falcon-downloads",
   "releasesUrl": "https://github.com/anushkrishnav/falcon-downloads/releases",
-  "latest": "1.0.0-beta.3",
+  "latest": "1.0.0-beta.4",
   "versions": [
+    {
+      "version": "1.0.0-beta.4",
+      "date": "2026-11-05",
+      "channel": "beta",
+      "status": "available",
+      "summary": "Clear automatic-save status, consistent Translate controls, and document tools before translation.",
+      "notes": [
+        "Completed translations show their automatically saved filename and explain when another export is optional.",
+        "The blue Translate button appears immediately after Optimize when a source document is first opened.",
+        "Export an untranslated PDF as Word (.docx), or Word as PDF. Conversion is text-only; original-format export keeps images, stamps, watermarks, tables and layout.",
+        "Word documents can be stamped and watermarked before translation; Falcon previews the embedded marks in their page positions.",
+        "Review edits are saved in Falcon; the editor explains that Export writes those edits into a document."
+      ],
+      "assets": {
+        "windows": {
+          "name": "Falcon_1.0.0-beta.4_x64-setup.exe",
+          "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/v1.0.0-beta.4/Falcon_1.0.0-beta.4_x64-setup.exe",
+          "size": 286093347,
+          "sha256": "a22d0f3756e85b65158121420ecac7d96b9b5fb01220cb6ac3fd9a229c3f2818"
+        },
+        "checksums": {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/v1.0.0-beta.4/SHA256SUMS.txt",
+          "size": 101,
+          "sha256": ""
+        }
+      }
+    },
     {
       "version": "1.0.0-beta.3",
       "date": "2026-11-02",
