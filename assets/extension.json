@@ -1,0 +1,47 @@
+{
+  "repo": "anushkrishnav/falcon-downloads",
+  "releasesUrl": "https://github.com/anushkrishnav/falcon-downloads/releases",
+  "tagPrefix": "extension-v",
+  "latest": "0.2.0",
+  "versions": [
+    {
+      "version": "0.2.0",
+      "date": "2026-11-08",
+      "channel": "beta",
+      "status": "available",
+      "summary": "Unsigned beta of the Falcon Email Translator for Gmail and Outlook on the web (Chrome, Chromium and Edge) on Windows and Linux.",
+      "notes": [
+        "Translate a message or a whole thread with Falcon on your own computer.",
+        "Save a thread into your Falcon workspace as plain text or PDF.",
+        "Falcon Pro installs the connector for you (Settings > Browser extension); the downloads here are for a manual install.",
+        "Unsigned beta: Windows SmartScreen may warn about the manual bridge installer."
+      ],
+      "assets": {
+        "bridge-linux": {
+          "name": "falcon-bridge-linux-0.2.0.tar.gz",
+          "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/extension-v0.2.0/falcon-bridge-linux-0.2.0.tar.gz",
+          "size": 199258,
+          "sha256": "47e980a3766edd96e092d5d08cfc4b9495dd7b02c73e44aa9ad212a65d391243"
+        },
+        "bridge-windows": {
+          "name": "falcon-bridge-windows-0.2.0.zip",
+          "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/extension-v0.2.0/falcon-bridge-windows-0.2.0.zip",
+          "size": 192514,
+          "sha256": "38c028a3a31175ef28db5135dcc012b05c6ce8b29d5e12e179055e96d7507337"
+        },
+        "extension": {
+          "name": "falcon-email-extension-0.2.0.zip",
+          "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/extension-v0.2.0/falcon-email-extension-0.2.0.zip",
+          "size": 58866,
+          "sha256": "82c49e4320e32b9334b01ae8515b0fb7f398087b902574832dbc68e7ebcbaed7"
+        },
+        "checksums": {
+          "name": "SHA256SUMS.txt",
+          "url": "https://github.com/anushkrishnav/falcon-downloads/releases/download/extension-v0.2.0/SHA256SUMS.txt",
+          "size": 296,
+          "sha256": ""
+        }
+      }
+    }
+  ]
+}

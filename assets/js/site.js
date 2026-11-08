@@ -147,6 +147,31 @@
     });
   }
 
+
+  // Email extension downloads (assets/extension.json; same pattern as versions.json)
+  var extBox = $("#ext-download");
+  if (extBox) {
+    var extNote = '<div class="callout info" style="margin-top:14px"><b>Not published yet.</b> The beta files appear here, with their sizes and SHA-256 values, as soon as they are released. Until then you can read the guide below, or watch the <a data-releases-url href="https://github.com/anushkrishnav/falcon-downloads/releases" rel="noopener">release page</a>.</div>';
+    fetch("assets/extension.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); }).then(function (d) {
+      var v = (d.versions || []).filter(function (x) { return x.version === d.latest; })[0] || (d.versions || [])[0];
+      if (!v) throw new Error("empty");
+      var a = v.assets || {}, live = v.status === "available";
+      var rows = [["extension", "Browser extension", "Zip: unzip, then load unpacked"], ["bridge-windows", "Windows bridge", "Zip: includes install-bridge.bat"], ["bridge-linux", "Linux bridge", "tar.gz: includes install.sh"], ["checksums", "Checksums", "SHA-256 of every file"]].filter(function (k) { return a[k[0]]; });
+      var html = '<div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between"><div><span class="badge gold">' + esc(v.channel || "beta") + '</span> <h3 style="display:inline;margin:0 0 0 8px;font-size:1.3rem">Falcon Email Translator ' + esc(v.version) + '</h3><div style="color:var(--muted)">' + esc(live ? (v.date || "") : "Not published yet") + '</div></div></div>';
+      if (v.summary) html += '<p style="margin-top:12px">' + esc(v.summary) + '</p>';
+      if (!live) html += extNote;
+      html += '<div class="ext-files">' + rows.map(function (k) {
+        var f = a[k[0]];
+        var btn = live ? '<a class="btn ' + (k[0] === "extension" || k[0] === "bridge-windows" ? "gold" : "line") + '" href="' + esc(f.url) + '" rel="noopener">Download</a>' : '<a class="btn line" aria-disabled="true">Not yet</a>';
+        return '<div class="ext-file"><div><h3>' + esc(f.name) + '</h3><div class="meta">' + esc(k[1]) + " &middot; " + esc(k[2]) + (f.size ? " &middot; " + (f.size > 1e6 ? (f.size / 1e6).toFixed(1) + " MB" : Math.max(1, Math.round(f.size / 1024)) + " KB") : "") + '</div></div>' + btn + (f.sha256 ? '<div><div style="font-size:.8rem;color:var(--muted)">SHA-256</div><div class="hash">' + esc(f.sha256) + '</div></div>' : "") + '</div>';
+      }).join("") + "</div>";
+      extBox.innerHTML = html;
+      if (d.releasesUrl) $$("[data-releases-url]").forEach(function (l) { l.href = d.releasesUrl; });
+    }).catch(function () {
+      extBox.innerHTML = extNote;
+    });
+  }
+
   // error code search
   var codes = $("#codes");
   if (codes) {
